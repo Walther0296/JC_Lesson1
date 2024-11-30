@@ -1,0 +1,9 @@
+FROM bellsoft\liberica-openjdk-alpine:11.0.16.1-1
+
+COPY .\src .\src
+
+RUN mkdir .\outclasses
+
+RUN javac -encoding utf-8 -classpath .\src  -d outclasses src\ru\gb\saushkin\Main.java
+
+CMD java -classpath .\outclasses src\ru\gb\saushkin\Main
