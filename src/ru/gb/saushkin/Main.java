@@ -1,3 +1,5 @@
+package ru.gb.saushkin;
+
 import ru.gb.saushkin.OtherClass;
 import ru.gb.saushkin.Decorator;
 
@@ -19,7 +21,14 @@ public class Main {
          *
          * */
         // --------------------------------------------
-
+        int result = OtherClass.add(5, 2);
+        System.out.println(Decorator.decorate(result));
+        result = OtherClass.sub(5, 2);
+        System.out.println(Decorator.decorate(result));
+        result = OtherClass.mul(5, 2);
+        System.out.println(Decorator.decorate(result));
+        result = OtherClass.div(5, 2);
+        System.out.println(Decorator.decorate(result));
 
         //---------------------------------------------
     }
